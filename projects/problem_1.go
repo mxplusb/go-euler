@@ -1,7 +1,7 @@
 package projects
 
 import (
-	"github.com/mxplusb/go-euler/projects/helpers"
+	"github.com/mxplusb/go-euler/helpers"
 )
 
 // Problem1: find the sum of all the multiples of 3 or 5 below 1000.

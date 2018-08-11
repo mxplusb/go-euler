@@ -1,6 +1,8 @@
 package helpers
 
-import "math/big"
+import (
+	"math/big"
+	)
 
 func IntEven(n int) bool {
 	return n%2 == 0
@@ -41,3 +43,26 @@ func Factorial(n *big.Int) (result *big.Int) {
 	}
 	return
 }
+
+// ModularExponentiation is just (x^y) % p
+func ModularExponentiation(x, y, p int) int {
+	var result = 1
+	x = x % p
+
+	for y > 0 {
+		if !IntEven(y) {
+			result = (result * x) % p
+		}
+		y = y >> 1 // y = y/2
+		x = (x * x) % p
+	}
+	return result
+}
+
+//func ModularSquareRoot(a, p int) int {
+//
+//}
+//
+//func LegendreSymbol(a, p int) int {
+//	ls := math.Pow(float64(a), (float64(p)-1)/2)
+//}

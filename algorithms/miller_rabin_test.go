@@ -1,4 +1,4 @@
-package helpers
+package algorithms
 
 import (
 	"testing"
